@@ -15,6 +15,6 @@ def get_most_frequent_words(text):
 
 
 if __name__ == '__main__':
-    filepath = input ()
+    filepath = input ("Enter path to file")
     text = load_data(filepath) 
     print (get_most_frequent_words(text))
