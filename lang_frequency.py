@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*- 
+     # -*- coding: utf-8 -*- 
+from collections import Counter
 
 def load_data(filepath):
     with open(filepath,'r') as file:
@@ -8,9 +9,12 @@ def load_data(filepath):
    
 
 def get_most_frequent_words(text):
-    pass
+    textlist = text.split()
+    out_put = Counter(textlist).most_common(10)
+    return out_put
 
 
 if __name__ == '__main__':
-    filepath = '/projects/5_lang_frequency/tst_text.txt'
-    print (load_data(filepath))
+    filepath = input ()
+    text = load_data(filepath) 
+    print (get_most_frequent_words(text))
